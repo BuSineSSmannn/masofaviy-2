@@ -19,11 +19,17 @@ if($uri['path'] == '/6-oy/7-dars/index.html'){
     include ('../6-oy/7-dars/index.php');
 }
 
-else if($uri['path'] == '/1-oy/1.js'){
+else if($uri['path'] == '/1-oy/1'){
     echo file_get_contents('../1-oy/1-dars/index.html');
 }
-else if($uri['path'] == '/1-oy/2.js'){
+else if($uri['path'] == '/1-oy/2'){
     echo file_get_contents('../1-oy/2-dars/index.html');
+}
+else if($uri['path'] == '/6-oy/8')   require('../6-oy/8-dars/index.php');
+else if($uri['path'] == '/6-oy/8/api') {
+
+    require('../6-oy/8-dars/api.php');  
+
 }
 
 else if($uri['path'] == '/mail'){
@@ -105,6 +111,6 @@ else if($uri['path'] == '/mail'){
 }
 
 else {
-echo '123';
+echo 'Not found';
 }
 // echo '</pre>';
