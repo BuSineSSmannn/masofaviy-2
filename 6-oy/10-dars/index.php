@@ -17,10 +17,12 @@ $mysqli = new MySqli($host,$user,$password,$db_name);
 
 if(isset($_POST['submit'])){
 
-    if($mysqli->query('SELECT * FROM users WHERE name="'.$_POST['name'].'"')->num_rows){
+    $name = $mysqli->real_escape_string($_POST['name']);
+    echo $name;
+    if($mysqli->query('SELECT * FROM users WHERE name="'.$name.'"')->num_rows){
         echo 'BUnday user bazada bor!';
     }else{
-       $mysqli->query('INSERT users (name,password) VALUES ("' .$_POST['name'].'","'.$_POST['password'].'")');
+       $mysqli->query('INSERT users (name,password) VALUES ("' .$name.'","'.$_POST['password'].'")');
        echo 'User muvoffaqiyatli qoshildi!';
     }
 

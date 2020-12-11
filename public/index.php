@@ -34,6 +34,8 @@ else if($uri['path'] == '/6-oy/8/api') {
 
 else if($uri['path'] == '/6-oy/10')   require('../6-oy/10-dars/index.php');
 
+else if($uri['path'] == '/6-oy/11')   require('../6-oy/11-dars/index.php');
+
 
 else if($uri['path'] == '/mail'){
 
